@@ -1,0 +1,57 @@
+.breeds {
+   .page__header {
+      position: relative;
+      z-index: 2;
+   }
+
+   &__body-header {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      @media screen and (min-width: '1440px') {
+         flex-direction: row;
+         
+      }
+   }
+
+   .sort {
+      background-color: var(--main-bg);
+      border: 2px solid transparent;
+      transition: border var(--transition);
+
+      svg {
+         fill: var(--gray-text);
+      }
+
+      &:hover {
+         border: 2px solid var(--primary-light);
+
+         svg {
+            fill: var(--primary);
+         }
+      }
+      &:hover svg {
+         fill: var(--primary);
+      }
+   }
+
+   .rout-name {
+      min-width: 143px;
+   }
+
+   &__header-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      @media screen and (min-width: '1440px') {
+         flex-direction: row;
+      }
+   }
+
+   &__nested-header-wrapper {
+      display: flex;
+      gap: 10px;
+   }
+}

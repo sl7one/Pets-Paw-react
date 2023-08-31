@@ -1,0 +1,40 @@
+.votes {
+   &__list {
+      margin-top: 52px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+   }
+
+   &__item {
+      padding: 15px;
+      background-color: var(--main-bg);
+      border-radius: 10px;
+
+      font-size: 16px;
+      font-weight: 400;
+      line-height: calc(24 / 16);
+
+      display: grid;
+      grid-template-columns: 75px auto 20px;
+      column-gap: 20px;
+   }
+
+   &__item-date {
+      padding: 3px 10px;
+      border-radius: 5px;
+      background-color: var(--main-white);
+      text-align: center;
+   }
+
+   &__item-text {
+      color: var(--gray-text);
+
+      span {
+         &:first-of-type {
+            color: var(--black-text);
+            font-weight: 500;
+         }
+      }
+   }
+}

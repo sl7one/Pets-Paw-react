@@ -1,0 +1,14 @@
+.gallery{
+    &__body-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        flex-direction: column;
+        gap: 10px;
+
+        @media screen and (min-width: '767px'){
+            flex-direction: row;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+   bottom: 10%;
+   left: 50%;
+   transform: translate(-50%, 50%);
+   width: max-content;
+   padding: 10px;
+   background: var(--main-white);
+   border-radius: 20px;
+}
+
+.swiper-pagination-bullet {
+   width: 10px;
+   height: 10px;
+   background: var(--primary-light);
+   opacity: unset;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+   opacity: unset;
+   background: var(--primary);
+}

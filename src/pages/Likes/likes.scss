@@ -1,0 +1,27 @@
+.likes {
+   .gallery-list__item {
+      img {
+         transition: filter var(--transition);
+      }
+      &:hover {
+         &::after {
+            background-color: transparent;
+         }
+         img {
+            filter: saturate(150%);
+         }
+      }
+   }
+}
+
+.search-results {
+   margin-top: 20px;
+   font-size: 20px;
+   line-height: calc(29 / 20);
+   text-align: left;
+
+   span {
+      font-weight: 500;
+      line-height: 29px;
+   }
+}

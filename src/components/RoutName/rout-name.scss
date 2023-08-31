@@ -1,0 +1,29 @@
+.rout-name {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 10px;
+   padding: 5px;
+   margin-left: 10px;
+   min-width: 156px;
+   min-height: 40px;
+   background-color: var(--primary);
+   color: var(--main-white);
+
+   font-size: 20px;
+   font-weight: 500;
+   line-height: calc(30 / 20);
+   letter-spacing: 2px;
+
+   text-transform: uppercase;
+}
+
+.rout-name.primary-light {
+   background-color: var(--primary-light);
+   color: var(--primary);
+}
+
+.rout-name.primary {
+   background-color: var(--primary);
+   // min-width: 90px;
+}

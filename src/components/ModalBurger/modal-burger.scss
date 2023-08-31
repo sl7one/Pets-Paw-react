@@ -1,0 +1,28 @@
+.modal-burger {
+   width: 100vw;
+   height: 100vh;
+   background-color: var(--main-bg);
+   padding: 30px;
+
+   position: fixed;
+   inset: 0;
+   z-index: 5;
+
+   visibility: hidden;
+   opacity: 0;
+   transform: scale(1.5) rotate(-15deg);
+   transition:
+      transform var(--transition),
+      visibility var(--transition),
+      opacity var(--transition);
+
+   .home__left-wrapper {
+      justify-content: center;
+   }
+}
+
+.modal-burger.opened {
+   opacity: 1;
+   transform: scale(1) rotate(0);
+   visibility: visible;
+}
