@@ -86,7 +86,6 @@ const Breeds = () => {
                   <BackComponent />
                   <div className="breeds__header-wrapper">
                      <SelectComponent
-                        width={101}
                         options={optionsBreeds}
                         isDisabled={optionsIsLoading}
                         onChange={onChange}
@@ -95,7 +94,6 @@ const Breeds = () => {
                      />
                      <div className="breeds__nested-header-wrapper">
                         <SelectComponent
-                           width={101}
                            options={optionsLimit}
                            defaulValue={{
                               label: `Limit: ${filter.limit}`,
