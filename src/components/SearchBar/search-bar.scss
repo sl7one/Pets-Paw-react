@@ -21,6 +21,10 @@
       transition: border var(--transition);
       flex: 1;
 
+      font-size: 20px;
+      line-height: calc(30 / 20);
+
+
       &:hover {
          border: 2px solid var(--primary-light);
       }
@@ -33,6 +37,7 @@
          font-size: 20px;
          line-height: calc(30 / 20);
          transition: color var(--transition);
+         color: var(--gray-text);
       }
 
       &:hover::placeholder {
