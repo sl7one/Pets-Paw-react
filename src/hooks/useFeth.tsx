@@ -57,6 +57,7 @@ export const useFetch = ({ api_cb, storageKey, storage = false, dependency }: IP
          }
       };
       getData();
+      // eslint-disable-next-line
    }, []);
 
    useEffect(() => {
@@ -91,6 +92,7 @@ export const useFetch = ({ api_cb, storageKey, storage = false, dependency }: IP
       };
 
       getData();
+      // eslint-disable-next-line
    }, [dependency]);
 
    return data;

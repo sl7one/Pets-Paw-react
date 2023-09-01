@@ -29,7 +29,7 @@ export type SelectEventType = {
 
 const Favourites = () => {
    const { isMobile, isTablet } = useMedia();
-   const [vote, setVote] = useState(null);
+   const [vote] = useState(null);
    const [value, setValue] = useState('');
 
    const {

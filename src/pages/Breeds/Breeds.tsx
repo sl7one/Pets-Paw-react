@@ -46,7 +46,6 @@ const Breeds = () => {
    const {
       data: optionsData,
       isLoading: optionsIsLoading,
-      error: optionsError,
    } = useFetch({
       api_cb: getBreeds,
       storage: true,
@@ -110,7 +109,7 @@ const Breeds = () => {
                            width={40}
                            className="sort"
                            onClick={() =>
-                              setFilter((prev) => ({ ...prev, ['order']: 'desc' }))
+                              setFilter((prev) => ({ ...prev, order: 'desc' }))
                            }
                         >
                            <Icon
@@ -124,7 +123,7 @@ const Breeds = () => {
                            width={40}
                            className="sort"
                            onClick={() =>
-                              setFilter((prev) => ({ ...prev, ['order']: 'asc' }))
+                              setFilter((prev) => ({ ...prev, order: 'asc' }))
                            }
                         >
                            <Icon
