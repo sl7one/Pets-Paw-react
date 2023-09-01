@@ -8,7 +8,7 @@ The site is an adaptive application for viewing, adding, voting and favouriting 
 ## How to use
 
 ### Use on-line
- Нou can use this link: **[https://sl7one.github.io/PetsPaw/](https://sl7one.github.io/PetsPaw/)**
+ You can use this link: **[https://sl7one.github.io/Pets-Paw-react/](https://sl7one.github.io/Pets-Paw-react/)**
 
 #### If site opening correctly, you will see the following pages:
 ![Main page](./public/readme.png)
@@ -16,6 +16,6 @@ The site is an adaptive application for viewing, adding, voting and favouriting 
 
 ## Technologies
 
-The project is built on Next.JS using SCSS for styling.
-axios - for Requests, swiper - for sviper Imgs.
+The project is built on React using SCSS for styling.
+axios - for Requests, swiper - for images presentation .
 
