@@ -17,16 +17,22 @@ import ButtonUpload from '../../components/ButtonUpload/ButtonUpload';
 import { toast } from 'react-toastify';
 
 import defImg from '../../assets/default.jpg';
+interface FormState {
+   breed: string;
+   limit: number;
+   order: string;
+   type: string;
+}
 
 const Gallery = () => {
    const { isMobile, isTablet } = useMedia();
-   const [form, setForm] = useState({
+   const [form, setForm] = useState<FormState>({
       breed: 'None',
       limit: 5,
       order: 'Random',
       type: 'Static',
    });
-   const [submitTrigger, setSubmitTrigger] = useState(null);
+   const [submitTrigger, setSubmitTrigger] = useState<FormState | null>(null);
    const [handleIsLoading, setHandleIsLoading] = useState(false);
    const [valueSearchForm, setValueSearchForm] = useState('');
 
@@ -35,14 +41,12 @@ const Gallery = () => {
       dependency: submitTrigger,
    });
 
-   //@ts-ignore
-   const onChange = ({ id, value }) => {
+   const onChange = ({ id, value }: { id: string; value: string }) => {
       setForm((prev) => ({ ...prev, [id]: value }));
    };
 
-   const onClickSubmit = (e: any) => {
+   const onClickSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
       e.preventDefault();
-      //@ts-ignore
       setSubmitTrigger(form);
    };
 
@@ -50,18 +54,15 @@ const Gallery = () => {
       setValueSearchForm(value);
    }, []);
 
-   //@ts-ignore
-   const onClickItem = async ({ id, favoriteId }) => {
+   const onClickItem = async ({ id, favoriteId }: { id: string; favoriteId: number }) => {
       setHandleIsLoading(true);
       if (favoriteId) {
          await deleteFromFavorites(favoriteId);
          setHandleIsLoading(false);
          toast.success('Your vote is added');
-
          return;
       }
       await addToFavorites(id);
-
       setHandleIsLoading(false);
       toast.success('Your vote is added');
    };
@@ -84,6 +85,7 @@ const Gallery = () => {
                   <ButtonUpload />
                </div>
                <FilterForm
+                  //@ts-ignore
                   onChange={onChange}
                   //@ts-ignore
                   onClickSubmit={onClickSubmit}
@@ -97,15 +99,15 @@ const Gallery = () => {
                ) : (
                   <GalleryGrid
                      galleryList={data}
-                     render={({ id, name, url, width, height, favoriteId }) => (
+                     //@ts-ignore
+                     render={({ id, name, url, width, height, favoriteId }:{ id:string, name:string, url:string, width:number, height:number, favoriteId:number }) => (
                         <div
                            key={id}
                            className="gallery-list__item"
                            onClick={
                               handleIsLoading
                                  ? () => {}
-                                 : //@ts-ignore
-                                   () => onClickItem({ id, favoriteId })
+                                 : () => onClickItem({ id, favoriteId })
                            }
                         >
                            {
