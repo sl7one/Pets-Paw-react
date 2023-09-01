@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Pets-Paw-react/static/css/main.ace35c1d.css",
+    "main.css": "/Pets-Paw-react/static/css/main.8c7733b2.css",
     "main.js": "/Pets-Paw-react/static/js/main.ec8d727e.js",
     "static/media/girl-and-pet.png": "/Pets-Paw-react/static/media/girl-and-pet.1927e13f60069098098c.png",
     "static/media/gallery.png": "/Pets-Paw-react/static/media/gallery.69ba4bdb455e5c8cd127.png",
@@ -9,11 +9,11 @@
     "static/media/sprite.svg": "/Pets-Paw-react/static/media/sprite.4fc713fa9febe9b5f82adf9c9e2193d7.svg",
     "static/media/logo.svg": "/Pets-Paw-react/static/media/logo.3fdcdf80c1ea7e3456763aa333b65a6f.svg",
     "index.html": "/Pets-Paw-react/index.html",
-    "main.ace35c1d.css.map": "/Pets-Paw-react/static/css/main.ace35c1d.css.map",
+    "main.8c7733b2.css.map": "/Pets-Paw-react/static/css/main.8c7733b2.css.map",
     "main.ec8d727e.js.map": "/Pets-Paw-react/static/js/main.ec8d727e.js.map"
   },
   "entrypoints": [
-    "static/css/main.ace35c1d.css",
+    "static/css/main.8c7733b2.css",
     "static/js/main.ec8d727e.js"
   ]
 }
