@@ -40,6 +40,7 @@ const Voting = () => {
       api_cb: getVotes,
       dependency: vote,
    });
+   
 
    const onClickVote = async (value: number) => {
       try {
@@ -98,7 +99,7 @@ const Voting = () => {
             <div className="page__body">
                <BackComponent />
                {isLoadingCats ? (
-                  <Loader />
+                  <Loader width={80} height={80}/>
                ) : (
                   <div className="wrapper">
                      <div className="thumb">
