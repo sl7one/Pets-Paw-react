@@ -35,19 +35,17 @@ const Favourites = () => {
    const {
       data: catsData,
       isLoading: catsIsLoading,
-      error: catsError,
    } = useFetch({
       api_cb: getFavorites,
    });
 
-   const { data: dataVotes = null, isLoading: isLoadingVotes } = useFetch({
+   const { data: dataVotes, isLoading: isLoadingVotes } = useFetch({
       api_cb: getVotes,
       dependency: vote,
    });
 
    const {
       data: dataFavorites = null,
-      // isLoading: isLoadingFavorites,
    } = useFetch({
       api_cb: getFavorites,
    });
