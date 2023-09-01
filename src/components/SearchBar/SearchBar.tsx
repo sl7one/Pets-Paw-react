@@ -16,7 +16,7 @@ export default function SearchBar({ value = "", onChange }: IProps) {
         value={value}
         placeholder="Search for breeds by name"
         onChange={({ target: { value } }) =>
-          onChange(value.trim().toLowerCase())
+          onChange(value.toLowerCase())
         }
       />
       <Link className="submit" to={`/search?q=${value}`}>

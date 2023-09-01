@@ -48,7 +48,6 @@ const BreedPage = () => {
     setValue(value);
   }, []);
 
-  if (!dataLimited.length) return;
 
   return (
     <main className="breed-page home container">

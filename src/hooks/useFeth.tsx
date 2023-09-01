@@ -40,12 +40,15 @@ export const useFetch = ({ api_cb, storageKey, storage = false, dependency }: IP
             if (storage) store.set(storageKey, data);
          } catch (error) {
             //@ts-ignore
-            console.log(error.message);
-            //@ts-ignore
-            setData((prev) => ({
-               ...prev,
-               error: error,
-            }));
+            if (error instanceof Error){
+                           //@ts-ignore
+               setData((prev) => ({
+                  ...prev,
+                  error: error,
+               }));
+
+            }
+            
          } finally {
             setData((prev) => ({
                ...prev,

@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React  from 'react';
 import './gallery-grid.scss';
 
 type GalleryType = {
@@ -23,7 +22,8 @@ interface IProps {
 
 export default function GalleryGrid({ galleryList, render }: IProps) {
 
-   if (!galleryList.length) return <p className='no-items'>Items not found</p>;
+
+   if (!galleryList.length) return <p className="no-items">Items not found</p>;
 
    const items = galleryList.map(({ id, image, name, url, width, height, favoriteId }) =>
       render({ id, image, name, url, width, height, favoriteId })
