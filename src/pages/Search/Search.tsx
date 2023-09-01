@@ -58,7 +58,7 @@ const Search = () => {
                   Search results for: <span>{value}</span>
                </p>
                {catsIsLoading ? (
-                  <Loader />
+                  <Loader width={80} height={80}/>
                ) : (
                   <GalleryGrid
                      galleryList={items}

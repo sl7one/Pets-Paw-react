@@ -134,7 +134,7 @@ const Breeds = () => {
                   </div>
                </div>
                {catsIsLoading ? (
-                  <Loader />
+                  <Loader width={80} height={80}/>
                ) : (
                   <GalleryGrid
                      galleryList={catsData}
